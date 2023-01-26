@@ -6,8 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  num1!:number;
-  num2!:number;
+  num1:number=0;
+  num2:number=0;
   result!:number;
 
   operacion(type:string):void{
