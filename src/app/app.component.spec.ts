@@ -29,7 +29,7 @@ describe('AppComponent', () => {
     expect(compiled.querySelector('h1')?.textContent).toContain('Calculadora para testing');
   });
 
-  it(`test funcion se espera 9`, () => {
+  it(`test funcion con suma espera un 9`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
 
