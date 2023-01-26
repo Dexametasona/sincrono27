@@ -1,0 +1,11 @@
+.box{
+    display: grid;
+    grid-template: repeat(4, min-content)/1fr 3fr;
+    gap: 1rem;
+    div:nth-child(5){
+        grid-column: span 2;
+    }
+    div:nth-child(6){
+        grid-column: span 2;
+    }
+}

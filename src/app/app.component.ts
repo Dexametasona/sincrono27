@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'sincrono27';
+  num1!:number;
+  num2!:number;
+  result!:number;
+
+  operacion(type:string):void{
+    if(type==='+') this.result=this.num1+this.num2
+    else if(type==='-') this.result=this.num1-this.num2
+    else if(type==='*') this.result=this.num1*this.num2
+    else if(type==='/') this.result=this.num1/this.num2
+  }
 }
