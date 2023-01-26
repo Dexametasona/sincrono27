@@ -40,4 +40,38 @@ describe('AppComponent', () => {
     expect(result).toEqual(expectedResult);
     
   });
+  it(`test funcion con resta espera un 2`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+
+    const mockeData = {op:'-', valor1: '7', valor2: '5'};
+    const expectedResult = 2;
+
+    const result = app.operacion(mockeData.op,mockeData.valor1, mockeData.valor2);
+    expect(result).toEqual(expectedResult);
+    
+  });
+  it(`test funcion con division espera un 2`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+
+    const mockeData = {op:'/', valor1: '10', valor2: '5'};
+    const expectedResult = 2;
+
+    const result = app.operacion(mockeData.op,mockeData.valor1, mockeData.valor2);
+    expect(result).toEqual(expectedResult);
+    
+  });
+  it(`test funcion con multiplicacion espera un 20`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+
+    const mockeData = {op:'*', valor1: '4', valor2: '5'};
+    const expectedResult = 20;
+
+    const result = app.operacion(mockeData.op,mockeData.valor1, mockeData.valor2);
+    expect(result).toEqual(expectedResult);
+    
+  });
+
 });
