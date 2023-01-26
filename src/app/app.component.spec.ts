@@ -16,16 +16,28 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'sincrono27'`, () => {
+  it(`should have as title 'Calculadora para testing'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('sincrono27');
+    expect(app.title).toEqual('Calculadora para testing');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('sincrono27 app is running!');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Calculadora para testing');
+  });
+
+  it(`test funcion se espera 9`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+
+    const mockeData = {op:'+', valor1: '4', valor2: '5'};
+    const expectedResult = 9;
+
+    const result = app.operacion(mockeData.op,mockeData.valor1, mockeData.valor2);
+    expect(result).toEqual(expectedResult);
+    
   });
 });
